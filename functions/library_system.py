@@ -16,7 +16,7 @@ def add_book(title, author):
     # TODO: Append the book's title and author to the database file
     text = f"{title}, {author}"
     with open(DATABASE_FILE, 'w') as file:
-        file.write("".join(text))
+        file.write(text)
         print(file)
         
     
