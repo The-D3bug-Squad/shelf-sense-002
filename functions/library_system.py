@@ -14,8 +14,8 @@ def add_book(title, author):
     :param author: The author of the book
     """
     # TODO: Append the book's title and author to the database file
-    with open(DATABASE_FILE, "w") as file:
-        file.write(f"{title}", f"{author}")
+    with open(DATABASE_FILE,"a") as file:
+        file.write(f"\n{title},{author}")
 
 def search_book(title):
     """
@@ -24,6 +24,16 @@ def search_book(title):
     :return: A dictionary with the book's details if found, else None
     """
     # TODO: Implement logic to search for a book in the database file
+    with open(DATABASE_FILE, "r") as file:
+        content = file.read()
+        content_list = content.split("\n")
+        dict1 = {}
+        for book in content_list:
+            if book == title:
+                dict1[book] = content_list[1]
+                return dict1
+            else:
+                return None
 
 def list_books():
     """
@@ -33,3 +43,4 @@ def list_books():
     # TODO: Read all books from the database file and return them as a list of dictionaries
 
 
+print(search_book("1984"))
