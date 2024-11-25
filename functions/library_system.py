@@ -14,9 +14,12 @@ def add_book(title, author):
     :param author: The author of the book
     """
     # TODO: Append the book's title and author to the database file
-    title = input("The title of the book: ")
-    author = input("The author of the book: ")
-    return(title, author)
+    with open(DATABASE_FILE, "w") as f:
+        f.write("")
+        title = input("The title of the book: ")
+        author = input("The author of the book: ")
+        for i in DATABASE_FILE:
+        return(title, author)
 
 def search_book(title):
     """
