@@ -29,12 +29,11 @@ def search_book(title):
         content_list = content.split("\n")
         dict1 = {}
         for book in content_list:
-            if book == title:
-                dict1[book] = content_list[1]
-                return dict1
-            else:
-                return None
-
+            book_list = book.split(",")
+            for book_title in book_list:
+                if book_title == title:
+                    dict1[book_title] = book_list[1]
+        return dict1
 def list_books():
     """
     List all books in the library.
