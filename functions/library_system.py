@@ -40,6 +40,9 @@ def list_books():
     :return: A list of dictionaries with each book's details
     """
     # TODO: Read all books from the database file and return them as a list of dictionaries
+    with open(DATABASE_FILE, "r") as file:
+        content = file.readlines()
+        print(content)
 
 
 print(search_book("1984"))
