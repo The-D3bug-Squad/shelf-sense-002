@@ -28,7 +28,7 @@ class TestIntegrationLibrarySystem(unittest.TestCase):
         :return: The output of the script.
         """
         process = subprocess.Popen(
-            ["python", "main.py"],
+            ["python3", "main.py"],
             stdin=subprocess.PIPE,
             stdout=subprocess.PIPE,
             stderr=subprocess.PIPE,
