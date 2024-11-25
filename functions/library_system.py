@@ -1,15 +1,12 @@
-DATABASE_FILE = "./database/books.txt"
+DATABASE_FILE = "test_books.txt"
 
 def initialize_database():
     """
     Initialize the database file if it doesn't exist.
     """
-    try:
-        with open(DATABASE_FILE, 'a') as db:
-            pass# Ensure the file exists
-    except FileNotFoundError:
-        with open(DATABASE_FILE,'w') as db:
-            db.write("")
+    with open(DATABASE_FILE, 'a') as db:
+        pass  # Ensure the file exists
+    
         
 
 def add_book(title, author):
