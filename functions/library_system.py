@@ -14,6 +14,8 @@ def add_book(title, author):
     :param author: The author of the book
     """
     # TODO: Append the book's title and author to the database file
+    with open(DATABASE_FILE, "w") as file:
+        file.write(f"{title}", f"{author}")
 
 def search_book(title):
     """
@@ -29,3 +31,5 @@ def list_books():
     :return: A list of dictionaries with each book's details
     """
     # TODO: Read all books from the database file and return them as a list of dictionaries
+
+
